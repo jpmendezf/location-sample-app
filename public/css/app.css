@@ -1,0 +1,33 @@
+body
+{
+	overflow-x: hidden;
+	background-color: #F3F3F3;
+}
+.header-section
+{
+	height: 300px;
+	background-image:url('../images/pizza3.webp');
+	background-size: cover;
+}
+.bg-light {
+    background-color: #F3F3F3 !important;
+}
+.after
+{
+	font-size: 23px;
+    color: #fff;
+    transition: opacity .5s;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    position: relative;
+    padding: 0;
+    transition: opacity .5s
+}
+.food-search
+{
+	z-index: 999;
+}
