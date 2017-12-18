@@ -12,6 +12,12 @@ body
 .bg-light {
     background-color: #F3F3F3 !important;
 }
+
+#location-details
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 .after
 {
 	font-size: 23px;
@@ -30,4 +36,15 @@ body
 .food-search
 {
 	z-index: 999;
+}
+
+.card-margin
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.card
+{
+	box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
 }

@@ -34,10 +34,68 @@
 	</section>
 	<div class="row">
 		<div class="container">
-			@yield('content')
+			<div class="row">
+				<div class="col-md-12 text-center">
+					 <h6 id="location-details"></h6>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<h5>Category</h5>
+					<hr>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Regional Desi Delights</span>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Starters</span>
+					</label>
+					<br>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Main course</span>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Rice/Paratha</span>
+					</label>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Desserts/Beverages</span>
+					</label>
+					<br><br>
+					<h5>Veg/Non-Veg</h5>
+					<hr>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Veg</span>
+					</label>
+					<br>
+					<label class="custom-control custom-checkbox">
+					  <input type="checkbox" class="custom-control-input">
+					  <span class="custom-control-indicator"></span>
+					  <span class="custom-control-description">Non-Veg</span>
+					</label>
+				</div>
+				<div class="col-md-9">
+					<div class="row" id="items">
+						@yield('content')
+					</div>
+					
+				</div>
+				
+			</div>
+			
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_o-P9KDY3kLSw2sYgbQH7PpwyAbXu8bo&libraries=places">

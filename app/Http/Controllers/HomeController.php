@@ -27,7 +27,8 @@ class HomeController extends Controller
     		// Create a client with a base URI
 			$client = new Client(['base_uri' => 'http://jsonblob.com/api/']);
 			$response = $client->request('GET', 'jsonBlob/b235e32f-8250-11e7-8e2e-893ffec7f2e1');  
-			return $response;  		
+			$items = json_decode($response->getBody());
+			return view('items',compact('items'));  		
     	} catch (Exception $e) {
     		
     	}
