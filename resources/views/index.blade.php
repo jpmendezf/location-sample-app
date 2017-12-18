@@ -19,6 +19,8 @@
 	                if(status == google.maps.GeocoderStatus.OK) {
 	                	$("#search").val(results[0]['formatted_address']);
 	                	$("#location-details").text(results[0]['formatted_address']);
+	                	$("#longitude").text("(longitude : "+pos.lng);
+	          			$("#latitude").text("latitude : "+pos.lat+")");
 	                	$.ajax({
 							url: "/items",
 							cache: false,
@@ -43,6 +45,8 @@
 					}
 				});
 	          $("#location-details").text(place.formatted_address);
+	          $("#longitude").text("(longitude : "+place.geometry.viewport.b.b);
+	          $("#latitude").text("latitude : "+place.geometry.viewport.f.b+")");
 	        });
 	    }
 	   $("#locate-me").click(function(e){
@@ -56,6 +60,8 @@
 	                if(status == google.maps.GeocoderStatus.OK) {
 	                	$("#search").val(results[0]['formatted_address']);
 	                	$("#location-details").text(results[0]['formatted_address']);
+	                	$("#longitude").text("(longitude : "+pos.lng);
+	          			$("#latitude").text("latitude : "+pos.lat+")");
 	                	$.ajax({
 					url: "/items",
 					cache: false,

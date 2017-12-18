@@ -21,7 +21,6 @@
 		</div>
 	</div>
 	<section class="row header-section">
-		<div class="after">
 			<div class="container food-search">
 			<div class="input-group" style="padding-top: 80px;">
 		        <input class="form-control enquiry-input" id="search" name="search">
@@ -30,13 +29,14 @@
 		       </div>
 		     </div>
 		</div>
-		</div>
 	</section>
 	<div class="row">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					 <h6 id="location-details"></h6>
+					 <span id="longitude"></span>
+					 <span id="latitude"></span>
 				</div>
 			</div>
 			<div class="row">
