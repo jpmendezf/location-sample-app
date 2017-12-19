@@ -52,3 +52,6 @@ User can use search box for location finding or they can use locate me button. O
 
 step 5:
 User can do category filter. Based on filter menu item will be listed. they can apply more than one category.
+
+step 6:
+User can do food type[veg or non veg] filter. Based on filter menu item will be listed. they can apply more than one food type.
