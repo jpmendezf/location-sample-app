@@ -24,10 +24,7 @@ class HomeController extends Controller
     public function getItems(Request $request)
     {
     	try {
-    		// Create a client with a base URI
-			$client = new Client(['base_uri' => 'http://jsonblob.com/api/']);
-			$response = $client->request('GET', 'jsonBlob/b235e32f-8250-11e7-8e2e-893ffec7f2e1');  
-			$items = json_decode($response->getBody());
+    		$items = $this->getMenuItems();
             $menu_items = $items->menu->menu_items;
 			return view('items',compact('menu_items'));  		
     	} catch (Exception $e) {
@@ -35,13 +32,24 @@ class HomeController extends Controller
     	}
     }
 
-    public function filterItems(Request $request)
+    public function getMenuItems()
     {
         try {
             // Create a client with a base URI
             $client = new Client(['base_uri' => 'http://jsonblob.com/api/']);
             $response = $client->request('GET', 'jsonBlob/b235e32f-8250-11e7-8e2e-893ffec7f2e1');
             $items = json_decode($response->getBody());
+            return $items;
+        } catch (Exception $e) {
+            
+        }
+    }
+
+    public function filterItems(Request $request)
+    {
+        try {
+            
+            $items = $this->getMenuItems();
             $menu_items = collect($items->menu->menu_items);
             if($request->input('category_ids')){
                 $category_ids = $request->input('category_ids');
