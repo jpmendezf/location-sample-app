@@ -13,3 +13,4 @@
 
 Route::get('/', 'HomeController@index')->name('index');
 Route::get('/items', 'HomeController@getItems')->name('menuItems');
+Route::get('/filter-items', 'HomeController@filterItems')->name('filterItems');

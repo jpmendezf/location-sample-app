@@ -1,7 +1,7 @@
 @php
 $i =1;
 @endphp
-@foreach($items->menu->menu_items as $item)
+@foreach($menu_items as $item)
 <div class="col-md-4 card-margin">
 	<div class="card">
 	  <img class="card-img-top" src="http://lorempixel.com/400/200/food/{{ $i }}" alt="Card image cap">

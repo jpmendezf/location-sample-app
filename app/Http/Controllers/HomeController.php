@@ -28,9 +28,29 @@ class HomeController extends Controller
 			$client = new Client(['base_uri' => 'http://jsonblob.com/api/']);
 			$response = $client->request('GET', 'jsonBlob/b235e32f-8250-11e7-8e2e-893ffec7f2e1');  
 			$items = json_decode($response->getBody());
-			return view('items',compact('items'));  		
+            $menu_items = $items->menu->menu_items;
+			return view('items',compact('menu_items'));  		
     	} catch (Exception $e) {
     		
     	}
+    }
+
+    public function filterItems(Request $request)
+    {
+        try {
+            // Create a client with a base URI
+            $client = new Client(['base_uri' => 'http://jsonblob.com/api/']);
+            $response = $client->request('GET', 'jsonBlob/b235e32f-8250-11e7-8e2e-893ffec7f2e1'); 
+            $category_ids = $request->input('category_ids'); 
+            $items = json_decode($response->getBody());
+            $menu_items = collect($items->menu->menu_items);
+            $filtered_items = $menu_items->filter(function ($item, $key) use ($category_ids) {
+                return in_array($item->category_id,$category_ids);
+            });
+            $menu_items = $filtered_items;
+            return view('items',compact('menu_items')); 
+        } catch (Exception $e) {
+            
+        }
     }
 }
