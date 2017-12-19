@@ -50,3 +50,4 @@ Run the application from localhost.
 step 4:
 User can use search box for location finding or they can use locate me button. Once the user select the location, application will list all menus and display latitude and longitude information with formated address.
 
+
