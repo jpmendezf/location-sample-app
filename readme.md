@@ -10,16 +10,20 @@ Location based search sample app
 ## Deployment
 
 Step 1:
-clone this repo
+Clone this repo
+```
+https://github.com/kalyanakannan/location-sample-app.git
+```
 
 step 2:
-run composer install in cloned project directory
+Run composer install in cloned project directory
+```
+composer install
+```
 
 step 3:
-run the application from localhost.
+Run the application from localhost.
 
 step 4:
 User can use search box for location finding or they can use ocate me button. once the user select the locatiion application will list all menus and display lonlatitude and longitude information with formated address.
-
-![step-4-img](http://prntscr.com/hp995s)
 
