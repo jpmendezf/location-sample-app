@@ -41,31 +41,32 @@
 			</div>
 			<div class="row">
 				<div class="col-md-3">
+					{{ csrf_field() }}
 					<h5>Category</h5>
 					<hr>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="category[]" value="101">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Regional Desi Delights</span>
 					</label>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="category[]" value="1201">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Starters</span>
 					</label>
 					<br>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="category[]" value="201">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Main course</span>
 					</label>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="category[]" value="701">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Rice/Paratha</span>
 					</label>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="category[]" value="501">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Desserts/Beverages</span>
 					</label>

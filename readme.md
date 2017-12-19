@@ -22,6 +22,29 @@ composer install
 ```
 
 step 3:
+Config env file in linux
+```
+cd application path
+
+cp .env.example .env
+```
+
+Config env file in windows
+```
+cd application path
+
+copy .env.example .env
+```
+
+step 3:
+Generate key for app
+```
+php artisan key:generate
+```
+
+
+
+step 3:
 Run the application from localhost.
 
 step 4:
