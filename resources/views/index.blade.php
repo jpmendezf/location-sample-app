@@ -49,6 +49,13 @@
 	          $("#latitude").text("latitude : "+place.geometry.viewport.f.b+")");
 	        });
 	    }
+	    $(".cart-minus").on("click", function(event){
+	    	event.preventDefault();
+	    	alert("test");
+	    	var product_id = $(this).attr('data-product-id');
+	    	alert(product_id);
+	    });
+
 	   $("#locate-me").click(function(e){
 	   		navigator.geolocation.getCurrentPosition(function(position) {
 				var pos = {

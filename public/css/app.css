@@ -19,6 +19,16 @@ body
     padding-bottom: 10px;
 }
 
+.cart-row
+{
+    margin-top: 10px;
+}
+
+.card-text
+{
+    height: 25px;
+}
+
 #latitude
 {
     padding-bottom: 10px;
