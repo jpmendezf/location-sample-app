@@ -22,7 +22,7 @@ $i =1;
 		    	</div>
 		    	
 		    	<div class="col-md-3">
-		    		<input type="text" class="form-control card-text cart-total" name="cart-total" id="cart_{{ $item->menu_item_id }}">
+		    		<input type="text" class="form-control card-text cart-total" name="cart-total" id="cart_{{ $item->menu_item_id }}" data-current-inventory={{ $item->current_inventory }}>
 		    	</div>
 
 		    	<div class="col-md-1">

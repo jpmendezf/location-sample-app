@@ -49,11 +49,29 @@
 	          $("#latitude").text("latitude : "+place.geometry.viewport.f.b+")");
 	        });
 	    }
-	    $(".cart-minus").on("click", function(event){
+	    $('body').on('click', '.cart-minus', function(event) {
 	    	event.preventDefault();
-	    	alert("test");
 	    	var product_id = $(this).attr('data-product-id');
-	    	alert(product_id);
+	    	var cart_total = $("#cart_"+product_id).val();
+	    	if(!$.isNumeric(cart_total))
+	    	{
+	    		cart_total = 0;
+	    		$("#cart_"+product_id).val("0");
+	    	}
+	    	if(parseInt(cart_total)>0)
+	    		$("#cart_"+product_id).val(parseInt(cart_total)-1);
+	    });
+
+	    $('body').on('click', '.cart-plus', function(event) {
+	    	event.preventDefault();
+	    	var product_id = $(this).attr('data-product-id');
+	    	var cart_total = $("#cart_"+product_id).val();
+	    	if(!$.isNumeric(cart_total))
+	    	{
+	    		cart_total = 0;
+	    	}
+	    	if(parseInt(cart_total)>=0)
+	    		$("#cart_"+product_id).val(parseInt(cart_total)+1);
 	    });
 
 	   $("#locate-me").click(function(e){
