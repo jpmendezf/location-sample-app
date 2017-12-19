@@ -26,7 +26,7 @@ $i =1;
 		    	</div>
 
 		    	<div class="col-md-1">
-		    		<span class="pull-right"><button class="cart-plus" data-product-id="{{ $item->menu_item_id }}"><i class="fa fa-plus" aria-hidden="true"></i></a></span>
+		    		<span class="pull-right"><a href="javascript:void(0)" class="cart-plus" data-product-id="{{ $item->menu_item_id }}"><i class="fa fa-plus" aria-hidden="true"></i></a></span>
 		    	</div>
 	    	</div>
 	    	
