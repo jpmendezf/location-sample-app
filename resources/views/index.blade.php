@@ -66,11 +66,12 @@
 	    	event.preventDefault();
 	    	var product_id = $(this).attr('data-product-id');
 	    	var cart_total = $("#cart_"+product_id).val();
+	    	var current_inventory = $("#cart_"+product_id).attr('data-current-inventory');
 	    	if(!$.isNumeric(cart_total))
 	    	{
 	    		cart_total = 0;
 	    	}
-	    	if(parseInt(cart_total)>=0)
+	    	if(parseInt(cart_total)>=0 && parseInt(cart_total) < parseInt(current_inventory))
 	    		$("#cart_"+product_id).val(parseInt(cart_total)+1);
 	    });
 
