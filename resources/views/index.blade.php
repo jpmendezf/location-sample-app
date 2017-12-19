@@ -77,14 +77,42 @@
 
 	    $(document).on('change', '[name="category[]"]', function() {
 	    	var category_ids = [];
+	    	var food_type = [];
 		    $('[name="category[]"]:checked').each(function() {
 		       category_ids.push($(this).val());
+		    });
+		    $('[name="food_type[]"]:checked').each(function() {
+		       food_type.push($(this).val());
 		    });
 			$.ajax({
 				url: "/filter-items",
 				cache: false,
 				data:{
-					category_ids:category_ids
+					category_ids:category_ids,
+					food_type:food_type
+				},
+				success: function(items){
+					$("#items").empty();
+					$("#items").append(items);
+				}
+			});
+		}); 
+
+		$(document).on('change', '[name="food_type[]"]', function() {
+	    	var category_ids = [];
+	    	var food_type = [];
+		    $('[name="category[]"]:checked').each(function() {
+		       category_ids.push($(this).val());
+		    });
+		    $('[name="food_type[]"]:checked').each(function() {
+		       food_type.push($(this).val());
+		    });
+			$.ajax({
+				url: "/filter-items",
+				cache: false,
+				data:{
+					category_ids:category_ids,
+					food_type:food_type
 				},
 				success: function(items){
 					$("#items").empty();

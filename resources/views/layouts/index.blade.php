@@ -75,13 +75,13 @@
 					<h5>Veg/Non-Veg</h5>
 					<hr>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="food_type[]" value="1">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Veg</span>
 					</label>
 					<br>
 					<label class="custom-control custom-checkbox">
-					  <input type="checkbox" class="custom-control-input">
+					  <input type="checkbox" class="custom-control-input" name="food_type[]" value="2">
 					  <span class="custom-control-indicator"></span>
 					  <span class="custom-control-description">Non-Veg</span>
 					</label>
